@@ -1,0 +1,33 @@
+﻿<Window x:Class="myWallpaperCarousel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:myWallpaperCarousel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Dictionaries/CommonColors.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid Background = "{StaticResource mainColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Label Content="Wallpaper Carousel Settings" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="AliceBlue" />
+
+            <!-- Wrap the user control in a Border -->
+            <Border Grid.Row="1" BorderThickness="1" BorderBrush="AliceBlue">
+                
+            </Border>
+
+            <Label Content="Status" Grid.Row="2" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="-5" FontSize="15" FontStyle="Italic"/>
+        </Grid>
+    </Grid>
+</Window>
