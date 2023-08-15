@@ -1,4 +1,5 @@
-﻿using System;
+﻿using myWallpaperCarousel.Resources.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace myWallpaperCarousel
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = ViewModel.Instance;
+           
+        }
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            Visibility = Visibility.Collapsed;
         }
     }
 }

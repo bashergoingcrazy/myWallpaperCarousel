@@ -15,9 +15,13 @@ namespace myWallpaperCarousel
     {
         private TaskbarIcon tb = null!;
 
-        private void InitApplication()
+        protected override void OnStartup(StartupEventArgs e)
         {
-            tb = (TaskbarIcon)FindResource("SystemTrayIcon");
+            base.OnStartup(e);
+            //Initialize NotifyIcon
+            tb = (TaskbarIcon)FindResource("myNotifyIcon");
         }
+
+        
     }
 }

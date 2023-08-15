@@ -8,8 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Icons\" />
-    <Folder Include="Resources\Classes\" />
+    <None Remove="icons\astronaut-helmet.ico" />
+    <None Remove="icons\astronaut-helmet.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons\astronaut-helmet.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icons\astronaut-helmet.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Resources\UserControls\" />
   </ItemGroup>
 
