@@ -4,7 +4,6 @@ C:\Users\vansh\source\repos\myWallpaperCarousel\bin\Debug\net6.0-windows\myWallp
 C:\Users\vansh\source\repos\myWallpaperCarousel\bin\Debug\net6.0-windows\myWallpaperCarousel.dll
 C:\Users\vansh\source\repos\myWallpaperCarousel\bin\Debug\net6.0-windows\myWallpaperCarousel.pdb
 C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\myWallpaperCarousel.csproj.AssemblyReference.cache
-C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\Resources\Dictionaries\CommonColors.baml
 C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\myWallpaperCarousel_MarkupCompile.cache
@@ -24,3 +23,6 @@ C:\Users\vansh\source\repos\myWallpaperCarousel\bin\Debug\net6.0-windows\Hardcod
 C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\myWallpaperCarousel.csproj.CopyComplete
 C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\Resources\Dictionaries\SystemTrayIcon.baml
 C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\App.baml
+C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\Resources\UserControls\ControlPage.g.cs
+C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\Resources\UserControls\ControlPage.baml

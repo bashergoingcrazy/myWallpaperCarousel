@@ -7,13 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Resources\UserControls\ControlPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\Dictionaries\CommonColors.xaml">
+    <Resource Update="Resources\Dictionaries\CommonColors.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Update="Resources\Dictionaries\SystemTrayIcon.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\Dictionaries\SystemTrayIcon.xaml">
+    <Page Update="Resources\UserControls\ControlPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -4,13 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:myWallpaperCarousel"
+        xmlns:cpage="clr-namespace:myWallpaperCarousel.Resources.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="400" Width="600"
         Closing="MainWindow_Closing">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Resources/Dictionaries/CommonColors.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Resources/Dictionaries/CommonColors.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -24,11 +25,11 @@
             <Label Content="Wallpaper Carousel Settings" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="AliceBlue" />
 
             <!-- Wrap the user control in a Border -->
-            <Border Grid.Row="1" BorderThickness="1" BorderBrush="AliceBlue">
-                
+            <Border Grid.Row="1" BorderThickness="1" BorderBrush="{StaticResource fontColor}">
+                <cpage:ControlPage/>
             </Border>
 
-            <Label Content="Status" Grid.Row="2" Foreground="AliceBlue" HorizontalAlignment="Left" Margin="-5" FontSize="15" FontStyle="Italic"/>
+            <Label Content="Status" Grid.Row="2" Foreground="{StaticResource fontColor}" HorizontalAlignment="Left" Margin="-5" FontSize="15" FontStyle="Italic"/>
         </Grid>
     </Grid>
 </Window>

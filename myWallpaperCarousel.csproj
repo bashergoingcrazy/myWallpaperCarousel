@@ -13,14 +13,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="Resources\Dictionaries\CommonColors.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="icons\astronaut-helmet.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="icons\astronaut-helmet.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\UserControls\" />
+    <Resource Include="Resources\Dictionaries\CommonColors.xaml" />
   </ItemGroup>
 
   <ItemGroup>
