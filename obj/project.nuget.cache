@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "OVJFbdlXukfkIbrVnoULuIh4h6PwCvGtLk91QAf7/XwKczWDy60V/u12rkirbS3yfSrH6V7MyJwJDeMNRMTVcA==",
+  "dgSpecHash": "LPMezeol8bu+gb9TPIE+9+TPtCrD2ffQ93MlnjsO7Qs5fp/kVRPbi7cTZyp5Ag87Vu64fs4RRLmtapic3mX+sg==",
   "success": true,
   "projectFilePath": "C:\\Users\\vansh\\source\\repos\\myWallpaperCarousel\\myWallpaperCarousel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vansh\\.nuget\\packages\\hardcodet.notifyicon.wpf\\1.1.0\\hardcodet.notifyicon.wpf.1.1.0.nupkg.sha512",
+    "C:\\Users\\vansh\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\vansh\\.nuget\\packages\\ookii.dialogs.wpf\\5.0.1\\ookii.dialogs.wpf.5.0.1.nupkg.sha512"
   ],
   "logs": []

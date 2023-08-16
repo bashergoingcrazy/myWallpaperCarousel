@@ -27,3 +27,4 @@ C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\Resourc
 C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\vansh\source\repos\myWallpaperCarousel\obj\Debug\net6.0-windows\Resources\UserControls\ControlPage.baml
 C:\Users\vansh\source\repos\myWallpaperCarousel\bin\Debug\net6.0-windows\Ookii.Dialogs.Wpf.dll
+C:\Users\vansh\source\repos\myWallpaperCarousel\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

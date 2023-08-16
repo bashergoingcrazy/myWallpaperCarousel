@@ -17,6 +17,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Ookii.Dialogs.Wpf;
 using myWallpaperCarousel.Resources.Classes;
+using System.ComponentModel;
+
 
 namespace myWallpaperCarousel.Resources.UserControls
 {
@@ -28,6 +30,8 @@ namespace myWallpaperCarousel.Resources.UserControls
         public string FolderPath = null!;  //Folder Path containing string 
         public string[] PngFiles = null!; 
         public ObservableCollection<BitmapImage> SelectedImagePaths { get; } = new ObservableCollection<BitmapImage>();
+        private HandleCarousel carousel;
+        public event Action<int> UpdateStatusEvent;
 
         public ControlPage()
         {
@@ -84,8 +88,9 @@ namespace myWallpaperCarousel.Resources.UserControls
             {
                 bool isRandomize = randomizeCheckBox.IsChecked ?? false;
 
+                UpdateStatusEvent?.Invoke(1);
                 WallpaperSettings currentSettings = new WallpaperSettings(FolderPath, interval, isRandomize);
-                //HandleCarousel.ApplyNewSettings(currentSettings);
+                carousel = new HandleCarousel(currentSettings);
             }
             else
             {
@@ -95,11 +100,15 @@ namespace myWallpaperCarousel.Resources.UserControls
         }
         private void Stop_Click(object sender, RoutedEventArgs e)
         {
-            //HandleCarousel.StopCarousel(); Handle the logic to stop the carousel if status is running
+            carousel.Dispose();
+            UpdateStatusEvent?.Invoke(2);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
+
+
+
     }
 }

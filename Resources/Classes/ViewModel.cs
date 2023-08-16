@@ -10,11 +10,23 @@ namespace myWallpaperCarousel.Resources.Classes
 {
     public class ViewModel
     {
+
+        private DefaultCarouselManager defaultCarouselManager;
+
         public ICommand OpenSettingsCommand { get; } = new RelayCommand(OpenSettings);
         public ICommand ExitCommand { get; } = new RelayCommand(Exit);
 
+        public ViewModel()
+        {
+            string defaultConfigFilePath = "C:\\Users\\vansh\\AppData\\Local\\myWallpaperCarousel\\defaults.json";
+            defaultCarouselManager = new DefaultCarouselManager(defaultConfigFilePath);
+        }
+
         private static void OpenSettings(object parameter)
         {
+            //Dispose of the default Carousel Manager
+            Instance.defaultCarouselManager.Dispose();
+
             // Implement your logic to open settings
             var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
 

@@ -8,6 +8,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="600"
         Closing="MainWindow_Closing">
+    <Window.DataContext>
+        <cpage:ControlPage/>
+    </Window.DataContext>
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -28,8 +31,10 @@
             <Border Grid.Row="1" BorderThickness="1" BorderBrush="{StaticResource fontColor}">
                 <cpage:ControlPage/>
             </Border>
-
-            <Label Content="Status" Grid.Row="2" Foreground="{StaticResource fontColor}" HorizontalAlignment="Left" Margin="-5" FontSize="15" FontStyle="Italic"/>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <Label Content="Status: "  Foreground="{StaticResource fontColor}" HorizontalAlignment="Left" Margin="-5" FontSize="15" FontStyle="Italic"/>
+                <Label x:Name="StatusFlag"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

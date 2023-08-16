@@ -23,7 +23,7 @@ namespace myWallpaperCarousel.Resources.Classes
         public WallpaperSettings() : this("", TimeSpan.Zero, false)
         {
             FolderPath = "C:\\Users\\vansh\\OneDrive\\Pictures\\Saved Pictures";
-            Interval = TimeSpan.FromMinutes(10);
+            Interval = TimeSpan.FromMinutes(01);
             IsRandomize = false;
         }
     }

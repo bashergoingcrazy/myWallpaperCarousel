@@ -1,4 +1,5 @@
 ﻿using myWallpaperCarousel.Resources.Classes;
+using myWallpaperCarousel.Resources.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,16 +22,37 @@ namespace myWallpaperCarousel
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ControlPage controlPage;
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = ViewModel.Instance;
-           
+
+
+            //DataContext = ViewModel.Instance;
+
         }
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
             Visibility = Visibility.Collapsed;
+            
         }
+
+        private void HanldeStausBar(int state)
+        {
+            switch (state)
+            {
+                case 1:
+                    StatusFlag.Content = "Running";
+                    StatusFlag.Foreground = Brushes.Green;
+                    break;
+                case 2:
+                    StatusFlag.Content = "Stopped";
+                    StatusFlag.Foreground = Brushes.Red;
+                    break;
+            }
+        }
+
+
     }
 }
