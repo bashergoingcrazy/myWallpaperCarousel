@@ -108,7 +108,27 @@ namespace myWallpaperCarousel.Resources.UserControls
             Application.Current.Shutdown();
         }
 
+        private void Save_Click (object sender, RoutedEventArgs e)
+        {
 
+            if (string.IsNullOrEmpty(FolderPath) || !Directory.Exists(FolderPath))
+            {
+                MessageBox.Show("Please provide a valid Folder/Directory Path");
+            }
+            if (TimeSpan.TryParseExact(intervalTimeInMinutes.Text, "mm", CultureInfo.InvariantCulture, out TimeSpan interval))
+            {
+                bool isRandomize = randomizeCheckBox.IsChecked ?? false;
+
+                UpdateStatusEvent?.Invoke(1);
+                WallpaperSettings currentSettings = new WallpaperSettings(FolderPath, interval, isRandomize);
+                SaveSettingsHandler.SaveSettings(currentSettings);
+            }
+            else
+            {
+                MessageBox.Show("Invalid interval time format. Please use the format 'mm' for minutes.");
+                return;
+            }
+        }
 
     }
 }

@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
+using System.Windows;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace myWallpaperCarousel.Resources.Classes
 {
@@ -12,9 +15,12 @@ namespace myWallpaperCarousel.Resources.Classes
         {
             if (File.Exists(defaultConfigFilePath))
             {
-                string json = File.ReadAllText(defaultConfigFilePath);
-                WallpaperSettings settings = JsonConvert.DeserializeObject<WallpaperSettings>(json);
-                carousel = new HandleCarousel(settings);
+                WallpaperSettings settings = SaveSettingsHandler.RetrieveSettings();
+                if(settings != null)
+                {
+                    //MessageBox.Show($"FolderPath: {settings.FolderPath}\nInterval: {settings.Interval}\nIsRandomize: {settings.IsRandomize}");
+                    carousel = new HandleCarousel(settings);
+                }
             }
         }
 

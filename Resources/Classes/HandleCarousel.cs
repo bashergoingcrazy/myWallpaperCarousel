@@ -70,13 +70,14 @@ namespace myWallpaperCarousel.Resources.Classes
         {
             Random rng = new Random();
             int n = imagePaths.Count;
-            while (n > 1)
+            if (n > 1)
             {
-                n--;
-                int k = rng.Next(n + 1);
-                string value = imagePaths[k];
-                imagePaths[k] = imagePaths[n];
-                imagePaths[n] = value;
+                int tempIndex = currentIndex;
+                while (tempIndex == currentIndex)
+                {
+                    tempIndex = rng.Next(0, imagePaths.Count);
+                }
+                currentIndex = tempIndex;
             }
         }
 

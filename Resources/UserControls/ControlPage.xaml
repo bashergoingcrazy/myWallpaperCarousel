@@ -52,6 +52,7 @@
             <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button Content="Apply" Height="20" Width="60" Margin="5" Click="Apply_Click"/>
                 <Button Content="Stop" Height="20" Width="60" Margin="5" Click="Stop_Click"/>
+                <Button Content="Save" Height="20" Width="60" Margin="5" Click="Save_Click"/>
                 <Button Content="Exit" Height="20" Width="60" Margin="5" Click="Exit_Click"/>
             </StackPanel>
         </Grid>
