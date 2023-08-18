@@ -33,7 +33,7 @@
             </Border>
             <StackPanel Grid.Row="2" Orientation="Horizontal">
                 <Label Content="Status: "  Foreground="{StaticResource fontColor}" HorizontalAlignment="Left" Margin="-5" FontSize="15" FontStyle="Italic"/>
-                <Label x:Name="StatusFlag"/>
+                <Label x:Name="StatusFlag" Content="Not Set" Foreground="Gray" Margin="-3" FontWeight="ExtraBold" FontStyle="Italic"/>
             </StackPanel>
         </Grid>
     </Grid>

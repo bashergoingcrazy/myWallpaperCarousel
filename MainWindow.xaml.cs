@@ -27,7 +27,7 @@ namespace myWallpaperCarousel
         {
             InitializeComponent();
 
-
+            DataContext = this;
             //DataContext = ViewModel.Instance;
 
         }
@@ -38,7 +38,7 @@ namespace myWallpaperCarousel
             
         }
 
-        private void HanldeStausBar(int state)
+        public void HanldeStausBar(int state)
         {
             switch (state)
             {
@@ -52,7 +52,5 @@ namespace myWallpaperCarousel
                     break;
             }
         }
-
-
     }
 }

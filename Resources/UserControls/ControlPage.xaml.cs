@@ -88,9 +88,16 @@ namespace myWallpaperCarousel.Resources.UserControls
             {
                 bool isRandomize = randomizeCheckBox.IsChecked ?? false;
 
-                UpdateStatusEvent?.Invoke(1);
+                var mainWindow = Window.GetWindow(this) as MainWindow;
+                mainWindow?.HanldeStausBar(1);
+
+                if (carousel != null)
+                {
+                    carousel.Dispose(); // Stop the existing carousel
+                }
                 WallpaperSettings currentSettings = new WallpaperSettings(FolderPath, interval, isRandomize);
                 carousel = new HandleCarousel(currentSettings);
+
             }
             else
             {
@@ -101,7 +108,9 @@ namespace myWallpaperCarousel.Resources.UserControls
         private void Stop_Click(object sender, RoutedEventArgs e)
         {
             carousel.Dispose();
-            UpdateStatusEvent?.Invoke(2);
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            mainWindow?.HanldeStausBar(2);
+            carousel = null;
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
